@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Arial";
+  user-select: none;
+}
+
+canvas {
+  display: block;
+}
+
+p {
+  margin: 5px;
+}
+
+#canvasContainer {
+  float: left;
+  margin: 5px;
+}
+
+#panelContainer {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#slidersContainer {
+  float: left;
+  padding: 5px;
+
+  background-color: #9b9b9b;
+}
+
+.slider {
+  width: 200px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.button {
+  margin-top: 5px;
+  padding: 10px 23px;
+
+  border: none;
+  background-color: #9b9b9b; 
+
+  font-size: 18px;
+  font-family: "Arial";
+  color: black;
+  text-align: center;
+}
