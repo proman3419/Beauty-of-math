@@ -3,7 +3,7 @@
 ![Alt Text](barnsley_fern.gif)
 
 # Demo
-![Try it out in a web browser](https://proman3419.github.io/Beauty-of-math/barnsley_fern/)
+##### [Try it out in a web browser](https://proman3419.github.io/Beauty-of-math/barnsley_fern/)
 
 # References
 ##### [Wikipedia](https://en.wikipedia.org/wiki/Barnsley_fern)
