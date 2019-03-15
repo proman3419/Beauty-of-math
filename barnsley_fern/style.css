@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Arial";
   user-select: none;
 }
@@ -39,12 +39,12 @@ p {
 
 .button {
   margin-top: 5px;
-  padding: 10px 23px;
+  padding: 10px 26.5px;
 
   border: none;
   background-color: #9b9b9b; 
 
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Arial";
   color: black;
   text-align: center;
