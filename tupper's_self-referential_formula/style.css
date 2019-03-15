@@ -1,0 +1,67 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  user-select: none;
+  background-color: #1c1c1c;
+}
+
+html, body, .field, .buttons {
+  font-size: 16px;
+  font-family: "Arial";
+}
+
+canvas {
+  display: block;
+}
+
+#canvasContainer, #panelContainer {
+  width: 1060px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+#canvasContainer {
+  padding-right: 10px;
+}
+
+#descriptionsContainer, #textareasContainer, #buttonsContainer {
+  margin-top: 8px;
+  margin-left: 30px;
+  display: inline-block;
+}
+
+#buttonsContainer {
+  margin-top: 2px; 
+}
+
+.description, .field, .buttonsContainer {
+  width: 497px;
+  display: inline-block;
+}
+
+.description {
+  margin: 0px 0px 0px 5px;
+}
+
+.field {
+  height: 100px;
+  border: none;
+  resize: none;
+  background-color: #9b9b9b;
+}
+
+.buttonsContainer {
+  margin-right: 3px;
+}
+
+.button {
+  margin: 0px;
+  padding: 10px 26.5px;
+
+  border: none;
+  background-color: #9b9b9b; 
+
+  color: black;
+  text-align: center;
+}
