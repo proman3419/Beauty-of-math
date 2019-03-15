@@ -12,28 +12,30 @@
   </head>
 
   <body>
-    <div id="canvasContainer"></div>
+    <div id="appContainer">
+      <div id="canvasContainer"></div>
 
-    <div id="panelContainer">
-      <div id="descriptionsContainer">
-        <p class="description">Generate graph from k value</p>
-        <p class="description">Generate k value from graph</p>
-      </div>
-
-      <div id="textareasContainer">
-        <textarea rows="5" cols="50" class="field" id="input_field"></textarea>
-        <textarea rows="5" cols="50" class="field" id="output_field"></textarea>
-      </div>
-
-      <div id="buttonsContainer">
-        <div class="buttonsContainer">
-          <input type="button" class="button" value="COPY" onclick="copy()">
+      <div id="panelContainer">
+        <div id="descriptionsContainer">
+          <p class="description">Generate graph from k value</p>
+          <p class="description">Generate k value from graph</p>
         </div>
 
-        <div class="buttonsContainer">
-          <input type="button" class="button" value="COPY" onclick="copy()">
-          <input type="button" class="button" value="CLEAR" onclick="clear()">
-          <input type="button" class="button" value="APPLY" onclick="apply()">
+        <div id="textareasContainer">
+          <textarea rows="5" cols="50" class="field" id="input_field"></textarea>
+          <textarea rows="5" cols="50" class="field" id="output_field"></textarea>
+        </div>
+
+        <div id="buttonsContainer">
+          <div class="buttonsContainer">
+            <input type="button" class="button" value="COPY" onclick="copyButton('input_field')">
+            <input type="button" class="button" value="CLEAR" onclick="clearButton()">
+            <input type="button" class="button" value="GENERATE" onclick="generateButton('graph')">
+          </div>
+
+          <div class="buttonsContainer">
+            <input type="button" class="button" value="COPY" onclick="copyButton('output_field')">
+            <input type="button" class="button" value="GENERATE" onclick="generateButton('value')">
         </div>
       </div>
     </div>

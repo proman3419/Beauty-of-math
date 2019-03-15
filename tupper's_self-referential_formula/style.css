@@ -15,6 +15,14 @@ canvas {
   display: block;
 }
 
+#appContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 #canvasContainer, #panelContainer {
   width: 1060px;
   margin: auto;
@@ -49,6 +57,7 @@ canvas {
   border: none;
   resize: none;
   background-color: #9b9b9b;
+  color: black;
 }
 
 .buttonsContainer {
