@@ -29,13 +29,9 @@ canvas {
   padding-top: 10px;
 }
 
-#canvasContainer {
-  padding-right: 10px;
-}
-
 #descriptionsContainer, #textareasContainer, #buttonsContainer {
   margin-top: 8px;
-  margin-left: 30px;
+  margin-left: 28px;
   display: inline-block;
 }
 

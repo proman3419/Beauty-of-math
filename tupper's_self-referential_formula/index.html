@@ -9,7 +9,6 @@
 
     <script src="BigInteger.js"></script>
     <script src="field.js"></script>
-    <script src="main.js"></script>
   </head>
 
   <body>
@@ -24,22 +23,24 @@
 
         <div id="textareasContainer">
           <textarea rows="5" cols="50" class="field" id="input_field"></textarea>
-          <textarea rows="5" cols="50" class="field" id="output_field"></textarea>
+          <textarea rows="5" cols="50" readonly class="field" id="output_field"></textarea>
         </div>
 
         <div id="buttonsContainer">
           <div class="buttonsContainer">
             <input type="button" class="button" value="COPY" onclick="copyButton('input_field')">
-            <input type="button" class="button" value="CLEAR" onclick="clearButton('input_field')">
+            <input type="button" class="button" value="CLEAR INPUT" onclick="clearButton('input')">
             <input type="button" class="button" value="GENERATE" onclick="generateButton('graph')">
           </div>
 
           <div class="buttonsContainer">
             <input type="button" class="button" value="COPY" onclick="copyButton('output_field')">
-            <input type="button" class="button" value="CLEAR" onclick="clearButton('canvas')">
+            <input type="button" class="button" value="CLEAR GRAPH" onclick="clearButton('graph')">
             <input type="button" class="button" value="GENERATE" onclick="generateButton('value')">
         </div>
       </div>
     </div>
   </body>
+    
+  <script src="main.js"></script>
 </html>
