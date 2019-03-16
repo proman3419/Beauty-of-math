@@ -9,8 +9,16 @@ function stringToBase17(str) {
   var arr = bigInt(str).divide(bigInt(17)).toArray(2).value;
   var result = [];
 
+  // Reverse the array to add the zeros in the next step before 
+  // the rest of the values
+  arr = arr.reverse();
+
+  // Filling the not specified fields' values with 0s
   while(arr.length < 1802)
     arr.push(0);
+
+  // Reverse once again to neutralize the previous reversion
+  arr = arr.reverse();
 
   // Every array in arrays == a column of the grid
   while(arr.length >= 17) {
