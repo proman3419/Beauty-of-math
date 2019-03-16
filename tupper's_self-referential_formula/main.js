@@ -1,38 +1,32 @@
 var k = bigInt('4858450636189713423582095962494202044581400587983244549483093085061934704708809928450644769865524364849997247024915119110411605739177407856919754326571855442057210445735883681829823754139634338225199452191651284348332905131193199953502413758765239264874613394906870130562295813219481113685339535565290850023875092856892694555974281546386510730049106723058933586052544096664351265349363643957125565695936815184334857605266940161251266951421550539554519153785457525756590740540157929001765967965480064427829131488548259914721248506352686630476300')
 
-function createGrid(arr) {
-  for(var x = 0; x < width; x += 10) {
-    for(var y = 0; y <= height; y += 10) {
-      fill(0);
-
-      try {
-        if(arr[x/10][y/10] == 1)
-          fill(255);
-      } catch {}
-
-      stroke(123);
-      strokeWeight(1);
-      // height-y because of the fact, that in CS coordinate system's
-      // y axis is reversed
-      rect(x, height-y-10, 10, 10);
-    }
-  }
+function generateGraph() {
+  for(var i = 0; i < fields.length; i++)
+    fields[i].draw();
 }
 
-function stringToBase17Array(str) {
+function stringToBase17(str) {
   var arr = bigInt(str).divide(bigInt(17)).toArray(2).value;
-  var arrays = [];
+  var result = [];
+
+  while(arr.length < 1802)
+    arr.push(0);
 
   // Every array in arrays == a column of the grid
-  while(arr.length > 0) {
+  while(arr.length >= 17) {
     // Reverse every column
-    arrays.push(arr.splice(0, 17).reverse());
+    result.push(arr.splice(0, 17).reverse());
   }
 
-  // Reverse all rows
-  arrays = arrays.reverse();
+  return result;
+}
 
-  return arrays;
+function initializeFields(arr) {
+  for(var x = 0; x < width; x += 10) {
+    for(var y = 0; y <= height; y += 10) {
+      fields.push(new Field(x, y, arr[x/10][y/10]));
+    }
+  }
 }
 
 // #region buttons
@@ -42,22 +36,31 @@ function copyButton(str) {
   document.execCommand('copy');
 }
 
-function clearButton() {
-  document.getElementById('input_field').value = '';
+function clearButton(str) {
+  if(str === 'input_field')
+    document.getElementById('input_field').value = '';
+  else if(str === 'canvas')
+    console.log('not implemented yet');
 }
 
 function generateButton(str) {
   if(str === 'graph')
   {
+    fields = [];
     var inputField = document.getElementById('input_field');
-    var arr = stringToBase17Array(inputField.value);
-    createGrid(arr);
+    var temp_arr = stringToBase17(inputField.value);
+    initializeFields(temp_arr);
+    generateGraph();
   }
   else if(str === 'value')
   {
     console.log('not implemented yet');
   }
 }
+// #endregion
+
+// #region globals
+var fields = [];
 // #endregion
 
 function setup() {
@@ -69,5 +72,6 @@ function setup() {
 }
 
 function mouseClicked(event) {
-  console.log(event);
+  var x = parseInt(mouseX/10);
+  var y = parseInt(mouseY/10);
 }
