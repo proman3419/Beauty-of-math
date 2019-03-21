@@ -5,16 +5,21 @@ html, body {
   font-size: 16px;
   font-family: "Arial";
   color: white;
+  user-select: none;
 }
 
 canvas {
   display: block;
 }
 
+p {
+  margin: 5px;
+}
+
 #panelContainer {
-  padding: 10px;
+  padding: 5px 10px;
   position: absolute;
-  left: 20px;
-  top: 8px;
+  left: 5px;
+  top: 5px;
   background-color: black;
 }

@@ -11,7 +11,7 @@ function branch(length) {
 function leftRight(direction, length) {
   push();
   rotate(direction * sAngle.value());
-  branch(length * sLengthDecrease.value());
+  branch(length * (1 - sLengthDecrease.value()));
   pop();
 }
 
@@ -23,13 +23,13 @@ function displayValuesInHTML() {
 }
 
 function initializeSliders() {
-  sAngle = createSlider(Math.PI/32, Math.PI, Math.PI/4, Math.PI/64);
+  sAngle = createSlider(Math.PI/32, Math.PI, Math.PI*1/8, Math.PI/64);
   sAngle.parent('slider_angle')
   sStartingLength = createSlider(10, 500, 100, 10);
   sStartingLength.parent('slider_starting_length');
   sMinLength = createSlider(4, 100, 10, 2);
   sMinLength.parent('slider_min_length');
-  sLengthDecrease = createSlider(0, 0.8, 0.8, 0.05);
+  sLengthDecrease = createSlider(0.2, 0.95, 0.2, 0.05);
   sLengthDecrease.parent('slider_length_decrease');
 }
 
