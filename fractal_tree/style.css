@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-size: 16px;
+  font-family: "Arial";
+  color: white;
+}
+
+canvas {
+  display: block;
+}
+
+#panelContainer {
+  padding: 10px;
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  background-color: black;
+}
