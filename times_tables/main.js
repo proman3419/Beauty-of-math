@@ -1,4 +1,8 @@
 var points = [];
+var timesMin = 0.1;
+var timesMax = 1000;
+var pointsAmountMin = 3;
+var pointsAmountMax = 1000;
 
 // displays
 var dTimes = document.getElementById('display_times');
@@ -44,10 +48,10 @@ function addClassToElement(parentElementName, className) {
 }
 
 function initializeSliders() {
-  sTimes = createSlider(0.1, 1000, 2, 0.1);
+  sTimes = createSlider(timesMin, timesMax, 2, 0.1);
   sTimes.parent('slider_times');
   addClassToElement('slider_times', 'slider');
-  sPointsAmount = createSlider(3, 1000, 200, 1);
+  sPointsAmount = createSlider(pointsAmountMin, pointsAmountMax, 200, 1);
   sPointsAmount.parent('slider_points_amount');
   addClassToElement('slider_points_amount', 'slider');
   sCircleDiameter = createSlider(10, 2*height, 0.9*height, 10);
